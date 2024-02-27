@@ -17,12 +17,10 @@ const mongourl =
   "mongodb+srv://sapna123:admin123@cluster0.pvatv.mongodb.net/?retryWrites=true&w=majority";
 var db;
 //get
-app.get("/", (req, res) => {
-  res.send("Welcome to Node Api2");
-});
+
 
 //List All cities
-app.get("/location", (req, res) => {
+app.get("/", (req, res) => {
   db.collection("Locations")
     .find()
     .toArray((err, result) => {
